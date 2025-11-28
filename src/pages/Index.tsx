@@ -24,6 +24,34 @@ const Index = () => {
     }
   ];
 
+  const logos = [
+    {
+      url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/066179ed-2de3-40e6-807f-2f088653429c.jpg",
+      title: "Минималист",
+      description: "Геометрический стиль"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/32a396f3-650e-48fc-808d-f492dd26f047.jpg",
+      title: "Королевский",
+      description: "С короной"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/e67619bb-7743-4452-94aa-2c5487b732e9.jpg",
+      title: "Атлетик",
+      description: "Сила и мощь"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/28607d25-cb63-49ac-b801-286439b203fd.jpg",
+      title: "Монограмма",
+      description: "Арт-деко стиль"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/fc6bc128-ab45-4baf-aac5-5b2af20d12af.jpg",
+      title: "Футуристик",
+      description: "Ультрасовременный"
+    }
+  ];
+
   const gallery = [
     {
       url: "https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/e09a1c35-dfd9-4dcd-a4b4-df515e3d6039.jpg",
@@ -153,6 +181,43 @@ const Index = () => {
                   <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
                     Подробнее
                   </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16 space-y-4">
+            <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full">
+              <span className="text-secondary text-sm font-semibold tracking-wide">ВАРИАНТЫ ЛОГОТИПА</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold">Выберите свой стиль</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              5 премиум вариантов для вашего бренда
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-6">
+            {logos.map((logo, index) => (
+              <Card 
+                key={index}
+                className="bg-background border-border hover:border-secondary transition-all duration-300 hover:scale-105 group cursor-pointer"
+              >
+                <CardContent className="p-6 space-y-4">
+                  <div className="aspect-square bg-white rounded-xl overflow-hidden flex items-center justify-center p-4">
+                    <img 
+                      src={logo.url} 
+                      alt={logo.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="text-center space-y-1">
+                    <h3 className="font-bold text-lg">{logo.title}</h3>
+                    <p className="text-sm text-muted-foreground">{logo.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
