@@ -225,7 +225,103 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="gallery" className="py-20 px-6">
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16 space-y-4">
+            <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full">
+              <span className="text-secondary text-sm font-semibold tracking-wide">НОВАЯ КОЛЛЕКЦИЯ</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold">KRIST-TALL Ski Jacket</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Премиум лыжная куртка для экстремальных условий
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-2xl p-8 flex items-center justify-center">
+              <img 
+                src="https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/296a6586-b559-42fe-a27d-dcb3a391de04.jpg" 
+                alt="KRIST-TALL Front"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="bg-white rounded-2xl p-8 flex items-center justify-center">
+              <img 
+                src="https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/2194495b-ce6d-41c2-9506-8e2d98648f32.jpg" 
+                alt="KRIST-TALL Back"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="bg-white rounded-2xl p-8 flex items-center justify-center">
+              <img 
+                src="https://cdn.poehali.dev/projects/f7f6731e-cd28-476c-b236-0e02c6700f4e/files/005c343e-fc48-4c57-8538-630f48818fc6.jpg" 
+                alt="KRIST-TALL Side"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
+          <Card className="bg-card border-border">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-secondary">Характеристики</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <Icon name="Shield" size={20} className="text-secondary mt-1" />
+                      <span>Водонепроницаемость 20000 мм</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Wind" size={20} className="text-secondary mt-1" />
+                      <span>Защита от ветра и холода до -30°C</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Droplet" size={20} className="text-secondary mt-1" />
+                      <span>Мембрана Gore-Tex Pro</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Zap" size={20} className="text-secondary mt-1" />
+                      <span>Легкий вес 890г</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-secondary">Технологии</h3>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <Icon name="Sparkles" size={20} className="text-secondary mt-1" />
+                      <span>Утеплитель PrimaLoft Gold</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Lock" size={20} className="text-secondary mt-1" />
+                      <span>YKK Aquaguard молнии</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Activity" size={20} className="text-secondary mt-1" />
+                      <span>Вентиляция подмышками</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="Smartphone" size={20} className="text-secondary mt-1" />
+                      <span>Карман для гаджетов с подогревом</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border flex items-center justify-between">
+                <div>
+                  <div className="text-sm text-muted-foreground mb-2">Цена</div>
+                  <div className="text-4xl font-bold text-secondary">89 990 ₽</div>
+                </div>
+                <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-12">
+                  Заказать
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 px-6 bg-card">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full">
